@@ -37,6 +37,20 @@ def random_positive_leaner(game_data,player_nr):
     #your cool code ended here
     return choice
 
+def random_negative_leaner(game_data,player_nr):
+    #game_data is the array of games so far, either empty(first round) or formatted like this: player_nr [[False, False],[False, False]] (2 rounds of only defections)
+    #player_nr is this players index, so whether they are the first(0) or the second(1) value in a round
+    opponent_nr=1-player_nr
+    #for ease of use this is index of the opponents value
+    choice=False
+    #this function should return either true(coorperate) or false(defect)
+
+    #your cool code goes here
+    if random.randint(0,10)<4:
+        choice=True
+    #your cool code ended here
+    return choice
+
 def i_hate_certain_numbers(game_data,player_nr):
     opponent_nr=1-player_nr
     hated_numbers=[7,13,17,23]

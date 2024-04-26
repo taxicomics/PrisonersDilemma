@@ -1,10 +1,10 @@
 import statistics
 
-def analyze_results(game_data):
+def analyze_results(game_data,game_nr):
     defect_str="X "
     coorperate_str="O "
-    spacer_str="___"*len(game_data)
-    lines=["These are the results",spacer_str]
+    spacer_str=""*len(game_data)
+    lines=["Game "+str(game_nr)+":",spacer_str]
     str1="Player 1: "
     str2="Player 2: "
     p_1_points=0
