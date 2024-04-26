@@ -18,8 +18,8 @@ nr_of_games=300#int(input("How many games should be played?"))
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 #                      Put YOUR functions down below
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-function1=contenders.random_positive_leaner
-function2=contenders.random_negative_leaner
+function1=contenders.lil_devil
+function2=contenders.lil_devil
 
 for i in range(nr_of_games):
     helper_functions.play_game( games,function1,function2,nr_of_rounds)
