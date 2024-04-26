@@ -36,6 +36,7 @@ def analyze_results(game_data):
     #print the results
     for i in lines:
         print(i)
+    return p_1_points,p_2_points
 
 def play_game(games_array,func1,func2,how_many_times):
     for i in range(how_many_times): 
@@ -43,6 +44,17 @@ def play_game(games_array,func1,func2,how_many_times):
         choice_2=func2(games_array,1)
         games_array.append([choice_1,choice_2])
     
-def random_choice(game_data,player_nr):
-    ret=True
-    return ret
+def analyze_scores(score_table):
+    average_score_p_1=0
+    average_score_p_2=0
+    p1_sum=0
+    p2_sum=0
+    for i in score_table:
+        p1_sum+=i[0]
+        p2_sum+=i[1]
+
+    average_score_p_1=p1_sum/len(score_table)  
+    average_score_p_2=p2_sum/len(score_table)  
+    print(str(average_score_p_1))
+    print(str(average_score_p_2))
+    #print(score_table)
