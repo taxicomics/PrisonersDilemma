@@ -1,3 +1,5 @@
+import statistics
+
 def analyze_results(game_data):
     defect_str="X "
     coorperate_str="O "
@@ -46,15 +48,20 @@ def play_game(games_array,func1,func2,how_many_times):
     
 def analyze_scores(score_table):
     average_score_p_1=0
+    all_p1_scores=[]
+    all_p2_scores=[]
     average_score_p_2=0
     p1_sum=0
     p2_sum=0
     for i in score_table:
         p1_sum+=i[0]
+        all_p1_scores.append(i[0])
         p2_sum+=i[1]
+        all_p2_scores.append(i[1])
+
 
     average_score_p_1=p1_sum/len(score_table)  
     average_score_p_2=p2_sum/len(score_table)  
-    print(str(average_score_p_1))
-    print(str(average_score_p_2))
+    print(str(average_score_p_1)+" AVG Player 1 Score |"+str(statistics.median(all_p1_scores))+" Median Player 1 Score")
+    print(str(average_score_p_2)+" AVG Player 2 Score |"+str(statistics.median(all_p2_scores))+" Median Player 1 Score")
     #print(score_table)

@@ -36,3 +36,18 @@ def random_positive_leaner(game_data,player_nr):
         choice=True
     #your cool code ended here
     return choice
+
+def i_hate_certain_numbers(game_data,player_nr):
+    opponent_nr=1-player_nr
+    hated_numbers=[7,13,17,23]
+    #for ease of use this is index of the opponents value
+    choice=True
+    #this function should return either true(coorperate) or false(defect)
+
+    #your cool code goes here
+    round_nr=len(game_data)
+    if round_nr in hated_numbers:
+        choice=False
+    
+    #your cool code ended here
+    return choice
