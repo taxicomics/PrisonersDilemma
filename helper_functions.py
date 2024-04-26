@@ -24,11 +24,11 @@ def analyze_results(game_data,game_nr):
             p_1_points+=3
             p_2_points+=3
         elif i[0] and i[1]==False:
-            p_1_points+=5
-            p_2_points+=0
-        elif i[1] and i[0]==False:
             p_1_points+=0
             p_2_points+=5
+        elif i[1] and i[0]==False:
+            p_1_points+=5
+            p_2_points+=0
         elif i[0]==False and i[1]==False:
             p_1_points+=1
             p_2_points+=1
@@ -64,4 +64,5 @@ def analyze_scores(score_table):
     average_score_p_2=p2_sum/len(score_table)  
     print(str(average_score_p_1)+" AVG Player 1 Score |"+str(statistics.median(all_p1_scores))+" Median Player 1 Score")
     print(str(average_score_p_2)+" AVG Player 2 Score |"+str(statistics.median(all_p2_scores))+" Median Player 1 Score")
-    #print(score_table)
+    print(str(round(p1_sum/(p1_sum+p2_sum),2))+ " Player 1 Percent of Points")
+    print(str(round(p2_sum/(p1_sum+p2_sum),2))+ " Player 2 Percent of Points")
